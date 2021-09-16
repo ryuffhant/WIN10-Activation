@@ -72,6 +72,11 @@ Enterprise (N)
 EnterpriseS (LTSB) 
 EnterpriseS (LTSB) (N)
 
+==========================================================
+[DEV_WIP] Supported Windows Server Edition
+Windows Server 2019 Datacenter Desktop Experiences
+
+
 
 Credits:
 
