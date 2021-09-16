@@ -190,12 +190,36 @@ if [%osedition%] == [ServerRdsh] (
 	set "editionId=X21-41295"
 	goto :parseAndPatch
 )
-REM Adding support activation for Windows Server 2019 Datacenter
+:: Windows Server 2022 Datacenter Desktop Experiences
+if [%osedition%] == [ServerDatacenter] (
+	set "edition=ServerDatacenter"
+	set "key=WX4NM-KYWYW-QJJR4-XV3QB-6VM33"
+	set "sku=8"
+	set "editionId=X22-39426"
+	goto :parseAndPatch
+)
+:: Windows Server 2022 Standard Desktop Experiences
+if [%osedition%] == [ServerStandard] (
+	set "edition=ServerStandard"
+	set "key=VDYBN-27WPP-V4HQT-9VMD4-VMK7H"
+	set "sku=7"
+	set "editionId=X22-39497"
+	goto :parseAndPatch
+)
+:: Windows Server 2019 Datacenter Desktop Experiences
 if [%osedition%] == [ServerDatacenter] (
 	set "edition=ServerDatacenter"
 	set "key=WMDGN-G9PQG-XVVXX-R3X43-63DFG"
 	set "sku=8"
 	set "editionId=X21-83685"
+	goto :parseAndPatch
+)
+:: Windows Server 2019 Standard Desktop Experiences
+if [%osedition%] == [ServerStandard] (
+	set "edition=ServerStandard"
+	set "key=N69G4-B89J2-4G8F4-WWYCC-J464C"
+	set "sku=7"
+	set "editionId=X21-83400"
 	goto :parseAndPatch
 )
 ::===============================================================================================================
@@ -420,12 +444,36 @@ if [%osedition%] == [ServerRdsh] (
 	set "editionId=X21-41295"
 	goto :Insertkey
 )
-REM Adding support activation for Windows Server 2019 Datacenter
+:: Windows Server 2022 Datacenter Desktop Experiences
+if [%osedition%] == [ServerDatacenter] (
+	set "edition=ServerDatacenter"
+	set "key=WX4NM-KYWYW-QJJR4-XV3QB-6VM33"
+	set "sku=8"
+	set "editionId=X22-39426"
+	goto :parseAndPatch
+)
+:: Windows Server 2022 Standard Desktop Experiences
+if [%osedition%] == [ServerStandard] (
+	set "edition=ServerStandard"
+	set "key=VDYBN-27WPP-V4HQT-9VMD4-VMK7H"
+	set "sku=7"
+	set "editionId=X22-39497"
+	goto :parseAndPatch
+)
+:: Windows Server 2019 Datacenter Desktop Experiences
 if [%osedition%] == [ServerDatacenter] (
 	set "edition=ServerDatacenter"
 	set "key=WMDGN-G9PQG-XVVXX-R3X43-63DFG"
 	set "sku=8"
 	set "editionId=X21-83685"
+	goto :parseAndPatch
+)
+:: Windows Server 2019 Standard Desktop Experiences
+if [%osedition%] == [ServerStandard] (
+	set "edition=ServerStandard"
+	set "key=N69G4-B89J2-4G8F4-WWYCC-J464C"
+	set "sku=7"
+	set "editionId=X21-83400"
 	goto :parseAndPatch
 )
 ::===============================================================================================================
