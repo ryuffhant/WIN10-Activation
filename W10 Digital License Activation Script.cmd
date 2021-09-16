@@ -11,7 +11,7 @@ cd /d "%~dp0"
 :MAINMENU
 echo. :=======================================================:
 echo.
-Echo.     [1] Activate Windows 10 with Digital License
+Echo.     [1] Activate Windows 10 or Windows Server with Digital License
 Echo.
 Echo.     [2] Check Windows Activation Status
 echo. 
@@ -188,6 +188,14 @@ if [%osedition%] == [ServerRdsh] (
 	set "key=NJCF7-PW8QT-3324D-688JX-2YV66"
 	set "sku=175"
 	set "editionId=X21-41295"
+	goto :parseAndPatch
+)
+REM Adding support activation for Windows Server 2019 Datacenter
+if [%osedition%] == [ServerDatacenter] (
+	set "edition=ServerDatacenter"
+	set "key=WMDGN-G9PQG-XVVXX-R3X43-63DFG"
+	set "sku=8"
+	set "editionId=X21-83685"
 	goto :parseAndPatch
 )
 ::===============================================================================================================
@@ -411,6 +419,14 @@ if [%osedition%] == [ServerRdsh] (
 	set "sku=175"
 	set "editionId=X21-41295"
 	goto :Insertkey
+)
+REM Adding support activation for Windows Server 2019 Datacenter
+if [%osedition%] == [ServerDatacenter] (
+	set "edition=ServerDatacenter"
+	set "key=WMDGN-G9PQG-XVVXX-R3X43-63DFG"
+	set "sku=8"
+	set "editionId=X21-83685"
+	goto :parseAndPatch
 )
 ::===============================================================================================================
 :Insertkey
